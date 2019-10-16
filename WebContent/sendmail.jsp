@@ -89,7 +89,6 @@
 .floating-label-form-group label {
 	opacity: 1 !important;
 }
-
 .bg-secondary {
 	background-color: #dd3d31 !important;
 }
@@ -101,7 +100,9 @@
 .footer {
 	background-color: #dd3d31 !important;
 }
-.mce-notification {display: none !important;}
+.mce-notification {
+	display: none !important;
+}
 </style>
 <script type="text/javascript">
 tinymce.init({
@@ -128,7 +129,7 @@ tinymce.init({
 								.submit(
 										function(e) {
 											var to = $('#to').val();
-											var cc = $('#cc').val();
+											//var cc = $('#cc').val();
 											var title = $('#title').val();
 											var content = $('#content').val();
 											
@@ -140,12 +141,7 @@ tinymce.init({
 																'<span class="error" style="color:red">This field is required</span>');
 												valid = false;
 											} 
-											if (cc.length < 1) {
-												$('#cc')
-														.after(
-																'<span class="error" style="color:red">This field is required</span>');
-												valid = false;
-											}
+											
 											if (title.length < 1) {
 												$('#title')
 														.after(
